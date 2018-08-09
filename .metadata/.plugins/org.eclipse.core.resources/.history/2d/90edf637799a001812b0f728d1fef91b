@@ -1,0 +1,12 @@
+package com.sikri.team.dao;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface PlayerDAO extends CrudRepository<Player, Long> {
+
+	List<Player> findAll();
+	Team findByName(String name);
+	Team findByPosition(String name);
+}

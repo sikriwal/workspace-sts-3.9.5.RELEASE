@@ -1,0 +1,19 @@
+package com.sikri.grocery.dao;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Component;
+
+import com.sikri.grocery.domain.Team;
+
+@Component
+public interface TeamDAO extends CrudRepository<Team, Long> {
+	
+	List<Team> findAll();
+	
+	Team findByName(String name);
+	
+	Team findByname(String name);
+	
+}

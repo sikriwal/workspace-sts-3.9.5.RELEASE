@@ -1,0 +1,6 @@
+package com.sikri.grocery.dao;
+
+public interface TeamDAO extends CrudRepository<Team, Long> {
+	
+
+}

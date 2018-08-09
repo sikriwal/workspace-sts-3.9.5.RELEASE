@@ -1,0 +1,11 @@
+package com.sikri.team.domain;
+
+public class Player {
+
+	private name;
+	private position;
+	public Player() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

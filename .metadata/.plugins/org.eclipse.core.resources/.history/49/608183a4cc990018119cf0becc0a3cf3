@@ -1,0 +1,22 @@
+package com.sikri.team;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class MainController {
+
+
+	public MainController() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@RequestMapping("/team/{name}")
+	public @ResponseBody String getTeam(@PathVariable String name)
+	{
+		String teamName = "Hello World" + name;
+		return teamName;
+	}
+}

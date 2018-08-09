@@ -1,0 +1,47 @@
+package com.sikri.team.dao;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class ChildTeam {
+	
+	@Id
+	@GeneratedValue
+	Long id;
+
+	@ManyToOne
+	private Team team;
+	public Team getTeam() {
+		return team;
+	}
+	public void setTeam(Team team) {
+		this.team = team;
+	}
+	private String childname;
+	public ChildTeam() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public ChildTeam(String name) {
+		// TODO Auto-generated constructor stub
+	this.childname = name;
+	}
+	
+		
+	public String getChildname() {
+		return childname;
+	}
+	public void setChildname(String childname) {
+		this.childname = childname;
+	}
+	
+	@Override
+	public String toString() {
+		return "ChildTeam [id=" + id + ", team=" + team + ", childname=" + childname + "]";
+	}
+	
+
+}

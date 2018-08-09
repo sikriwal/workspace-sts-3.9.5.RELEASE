@@ -1,0 +1,9 @@
+package com.sikri.client;
+
+public class ConfigController {
+
+	public ConfigController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

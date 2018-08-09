@@ -1,0 +1,12 @@
+package com.sikri.team.dao;
+
+@Entity
+public class ChildTeam {
+
+	private String childname;
+	public ChildTeam() {
+		// TODO Auto-generated constructor stub
+	}
+	
+
+}

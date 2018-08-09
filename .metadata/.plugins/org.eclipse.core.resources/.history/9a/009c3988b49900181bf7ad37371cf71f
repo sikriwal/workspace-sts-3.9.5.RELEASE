@@ -1,0 +1,9 @@
+package com.sikri.grocery;
+
+public class JPAConfig {
+
+	public JPAConfig() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

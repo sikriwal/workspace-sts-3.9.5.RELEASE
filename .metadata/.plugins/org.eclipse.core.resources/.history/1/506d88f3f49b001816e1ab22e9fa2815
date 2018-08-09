@@ -1,0 +1,55 @@
+package com.sikri.eureclient;
+
+import java.net.URI;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+
+@RestController
+@EnableDiscoveryClient
+@EnableAutoConfiguration
+
+
+public class MainController {
+
+	@Autowired 
+	LoadBalancerClient lbc;
+	
+	public MainController() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@GetMapping("/sentence")
+	  public @ResponseBody String getSentence() {
+	     
+		return getWord("EUREKACLIENT"); 
+		
+	  }
+	  
+	
+
+	
+	public String getWord(String service) {
+		ServiceInstance instance = lbc.choose(service);
+		URI subjecturi = URI.create(String.format("http://%s%s",instance.getHost(), instance.getPort()));
+	  if (subjecturi !=null ) {
+	    return (new RestTemplate()).getForObject(subjecturi,String.class);
+	  }
+	    
+	    return null;
+	  }
+}
+	
+	
+	     
+}

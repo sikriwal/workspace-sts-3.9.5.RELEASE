@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: ConfigClient
+  cloud:
+    services:
+      registrationMethod: route
+  config:
+    name: ConfigServer
+    enabled: true
+    uri: http://localhost:8001

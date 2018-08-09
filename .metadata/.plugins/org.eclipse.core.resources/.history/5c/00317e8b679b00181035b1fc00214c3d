@@ -1,0 +1,5 @@
+spring.application.name=ConfigClient
+spring.cloud.config.uri=http://localhost:8001/
+server.port=9999
+spring.cloud.config.username=sikriwal
+spring.cloud.config.password=Kandivali@16

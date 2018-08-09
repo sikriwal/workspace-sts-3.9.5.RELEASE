@@ -1,0 +1,4 @@
+logging.level.org.org.springframework.dao=debug
+spring.jpa.database=HSQL
+spring.jpa.generate-ddl=true
+spring.jpa.show-sql=true

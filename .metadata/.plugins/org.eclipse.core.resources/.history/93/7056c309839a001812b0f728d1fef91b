@@ -1,0 +1,7 @@
+package com.sikri.team.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface ChildTeamDAO extends CrudRepository<ChildTeam, Long> {
+
+}

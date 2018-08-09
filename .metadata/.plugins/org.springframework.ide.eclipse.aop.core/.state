@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="EurekaSentence"/>
+<aop-project name="EurekaClient-1"/>
+<aop-project name="EurekaClient"/>
+<aop-project name="EurekaServer"/>
+<aop-project name="ConfigClient"/>
+<aop-project name="ConfigServer"/>
+</aop-reference-model>

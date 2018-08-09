@@ -1,0 +1,26 @@
+package com.sikri.grocery;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.stereotype.Controller;
+
+import com.sikri.grocery.domain.Players;
+
+@Controller
+public class RestController {
+
+	public RestController() {
+		// TODO Auto-generated constructor stub
+	}
+
+@PostConstruct
+	public void init() {
+	Set<Players> players = new HashSet<Players>();
+	players.add("Vishal Singh", "pitcher");
+	players.add("Aahan Singh", "shortstop");
+}
+
+}

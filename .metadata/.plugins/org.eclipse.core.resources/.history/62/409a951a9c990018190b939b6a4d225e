@@ -1,0 +1,14 @@
+package com.sikri.grocery.domain;
+
+public class Players {
+
+	public Players() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

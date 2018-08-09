@@ -1,0 +1,9 @@
+package com.sikri.team.dao;
+
+public class ChildTeam {
+
+	public ChildTeam() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

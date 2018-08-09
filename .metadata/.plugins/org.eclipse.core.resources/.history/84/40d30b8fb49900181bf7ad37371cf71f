@@ -1,0 +1,6 @@
+package com.sikri.grocery;
+
+@Configuration 
+@EnableJpaRepositories("com.concretepage.repository")
+public class JPAConfig {
+}

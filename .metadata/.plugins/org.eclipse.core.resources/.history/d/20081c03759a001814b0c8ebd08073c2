@@ -1,0 +1,43 @@
+package com.sikri.team;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.sikri.team.dao.Player;
+import com.sikri.team.dao.Team;
+import com.sikri.team.dao.TeamDAO;
+
+@SpringBootApplication
+public class Team1Application {
+	
+	
+	/* @Autowired
+	private TeamDAO teamDao; */
+	
+	public static void main(String[] args) {
+		SpringApplication.run(Team1Application.class, args);
+	}
+
+	/*@PostConstruct
+	public void init() {
+		Set<Player> players = new HashSet<>();
+		players.add(new Player("Vishal", "hitter"));
+		players.add(new Player("Aahan", "pitcher"));
+		
+		Set<Team> team = new HashSet<Team>();
+		team.add(new Team("Heat","Miami", players));
+		team.add(new Team("Falcons","Atlanta", players));
+		teamDao.saveAll(team);
+	}*/
+	
+	
+	
+}

@@ -1,0 +1,10 @@
+package com.sikri.grocery.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.sikri.grocery.domain.Team;
+
+public interface TeamDAO extends CrudRepository<Team, Long> {
+	
+
+}

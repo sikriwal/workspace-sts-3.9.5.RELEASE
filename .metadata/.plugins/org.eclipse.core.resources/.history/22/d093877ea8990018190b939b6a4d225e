@@ -1,0 +1,29 @@
+package com.sikri.grocery;
+
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.sikri.grocery.domain.Customer;
+
+@Controller
+public class MainController {
+	
+	
+	
+	@RequestMapping(method = RequestMethod.GET, value= "/home")
+	public ModelAndView index() {
+		Customer cust = new Customer("John", "Doe");
+		ModelAndView mv = new ModelAndView ( );
+		mv.addObject("cust", cust);
+		mv.setViewName("index");
+		return mv;
+		}
+	}
+

@@ -1,0 +1,2 @@
+spring.application.name=EurekaClient
+eureka.instance.instaanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}

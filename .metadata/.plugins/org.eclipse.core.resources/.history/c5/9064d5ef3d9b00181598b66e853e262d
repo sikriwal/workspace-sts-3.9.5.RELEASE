@@ -1,0 +1,13 @@
+package com.sikri.client;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ConfigController {
+
+	@Value("${lucky-word}") String lucky-word
+	public ConfigController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

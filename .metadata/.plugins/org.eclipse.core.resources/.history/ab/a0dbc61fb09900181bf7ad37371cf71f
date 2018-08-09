@@ -1,0 +1,90 @@
+package com.sikri.grocery.domain;
+
+import java.util.Set;
+
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import org.hibernate.annotations.Cascade;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
+
+@XmlRootElement
+
+@Entity
+public class Team {
+
+	public Team() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
+
+	@Id @GeneratedValue
+	Long id;
+	String name;
+	String location;
+	String mascot;
+	@OneToMany(cascade=CascadeType.ALL) @JoinColumn(name="teamId")
+	Set<Players>players;
+	
+	
+	public Team( String location, String name, Set<Players> players) {
+		super();
+		this.name = name;
+		this.location = location;
+		this.players = players;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getLocation() {
+		return location;
+	}
+
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+
+	public String getMascot() {
+		return mascot;
+	}
+
+
+	public void setMascot(String mascot) {
+		this.mascot = mascot;
+	}
+
+
+	public Set<Players> getPlayers() {
+		return players;
+	}
+
+
+	public void setPlayers(Set<Players> players) {
+		this.players = players;
+	}
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

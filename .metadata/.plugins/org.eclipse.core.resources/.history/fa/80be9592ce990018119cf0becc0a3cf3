@@ -1,0 +1,42 @@
+package com.sikri.team;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.sikri.team.domain.Player;
+import com.sikri.team.domain.Team;
+
+@Controller
+public class MainController {
+
+	@Autowired
+	private Team team;
+	public MainController() {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	@PostConstruct
+	public void init() {
+		Set<Player> players = new HashSet<>();
+		players.add(new Player("Vishal", "hitter"));
+		players.add(new Player("Aahan", "pitcher"));
+		
+		team = new Team("Orlando","Miami", players);
+	}
+	
+	@RequestMapping("/home/{name}")
+	public @ResponseBody String getTeam(@PathVariable String name)
+	{
+		//String teamName = "Hello World " + name;
+		return team;
+	}
+}

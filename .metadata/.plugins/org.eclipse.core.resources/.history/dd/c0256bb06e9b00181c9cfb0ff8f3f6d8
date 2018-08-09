@@ -1,0 +1,13 @@
+package com.sikri.eureclient1;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@EnableClientDiscovery
+public class EurekaClient1Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EurekaClient1Application.class, args);
+	}
+}

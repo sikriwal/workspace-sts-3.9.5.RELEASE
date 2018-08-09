@@ -1,0 +1,10 @@
+package com.sikri.grocery;
+
+public class RestController {
+
+	@RestController
+	public RestController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

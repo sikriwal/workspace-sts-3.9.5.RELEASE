@@ -1,0 +1,80 @@
+package com.sikri.grocery.domain;
+
+import java.util.Set;
+
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import javax.persistence.Entity;
+
+
+@XmlRootElement
+
+@Entity
+public class Team {
+
+	public Team() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
+	
+	String name;
+	String location;
+	String mascot;
+	Set<Players>players;
+
+	
+	public Team( String location, String name, Set<Players> players) {
+		super();
+		this.name = name;
+		this.location = location;
+		this.players = players;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getLocation() {
+		return location;
+	}
+
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+
+	public String getMascot() {
+		return mascot;
+	}
+
+
+	public void setMascot(String mascot) {
+		this.mascot = mascot;
+	}
+
+
+	public Set<Players> getPlayers() {
+		return players;
+	}
+
+
+	public void setPlayers(Set<Players> players) {
+		this.players = players;
+	}
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,50 @@
+package com.sikri.grocery.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Players {
+	@Id @GeneratedValue;
+	Long id;
+
+	String name ;
+	String position;
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+
+	public Players() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
+
+	
+	public Players( String name, String position)
+	{ this.name = name;
+	  this.position = position;
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

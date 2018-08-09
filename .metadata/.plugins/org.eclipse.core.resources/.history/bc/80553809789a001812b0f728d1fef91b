@@ -1,0 +1,55 @@
+package com.sikri.team;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.sikri.team.dao.Player;
+import com.sikri.team.dao.PlayerDAO;
+import com.sikri.team.dao.Team;
+import com.sikri.team.dao.TeamDAO;
+
+@Controller
+public class MainController {
+
+	@Autowired
+	TeamDAO teamDao; 
+	
+	@Autowired
+	PlayerDAO playerDao; 
+	public MainController() {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+	
+	@RequestMapping("/home/{name}")
+	public @ResponseBody List<Team> getTeam(@PathVariable String name)
+	{
+		//String teamName = "Hello World " + name;
+		return teamDao.findAll();
+	}
+	
+	@RequestMapping("/location/{name}")
+	public @ResponseBody Team getLocation(@PathVariable String name)
+	{
+		//String teamName = "Hello World " + name;
+		return teamDao.findByLocation(name);
+	}
+	
+	@RequestMapping("/player/{name}")
+	public @ResponseBody Team getPlayerByName(@PathVariable String name)
+	{
+		//String teamName = "Hello World " + name;
+		return playerDao.findByName(name);
+	}
+}

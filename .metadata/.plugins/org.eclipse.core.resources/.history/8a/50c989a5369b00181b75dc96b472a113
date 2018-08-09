@@ -1,0 +1,9 @@
+package com.sikri.server;
+
+public class HealthCheck {
+
+	public HealthCheck() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

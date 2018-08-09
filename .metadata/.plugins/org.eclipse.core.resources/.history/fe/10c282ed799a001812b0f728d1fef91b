@@ -1,0 +1,20 @@
+package com.sikri.team.dao;
+
+import javax.persistence.Entity;
+
+@Entity
+public class ChildTeam {
+
+	private String childname;
+	public ChildTeam() {
+		// TODO Auto-generated constructor stub
+	}
+	public String getChildname() {
+		return childname;
+	}
+	public void setChildname(String childname) {
+		this.childname = childname;
+	}
+	
+
+}

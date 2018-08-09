@@ -1,0 +1,9 @@
+package com.sikri.team.domain;
+
+public class Player {
+
+	public Player() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

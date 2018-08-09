@@ -1,0 +1,2 @@
+logging.level.org.org.springframework.dao=debug
+spring.jpa.database=HSQL

@@ -1,0 +1,22 @@
+package com.sikri.client;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ConfigController {
+
+	@Value("${lucky-word}") String luckyWord;
+	
+	//String luckyWord = "test";
+	public ConfigController() { 
+		// TODO Auto-generated constructor stub
+	}
+
+	@GetMapping("/lucky-word")
+	public String getConfig() {
+		return	"The config is" + luckyWord;
+
+}
+	}

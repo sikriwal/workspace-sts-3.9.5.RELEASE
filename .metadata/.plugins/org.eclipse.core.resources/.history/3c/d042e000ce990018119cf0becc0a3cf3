@@ -1,0 +1,24 @@
+package com.sikri.team;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.sikri.team.domain.Player;
+
+@SpringBootApplication
+public class Team1Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Team1Application.class, args);
+	}
+
+	@PostConsrtruct
+	public void init() {
+		Set<Player> players = new HashSet<>();
+		players.add(new Player("Vishal", "hitter"));
+		players.add(new Player("Aahan", "pitcher"));
+	}
+}

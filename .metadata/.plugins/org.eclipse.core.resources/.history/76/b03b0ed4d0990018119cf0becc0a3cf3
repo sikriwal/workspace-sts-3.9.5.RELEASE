@@ -1,0 +1,5 @@
+package com.sikri.team.dao;
+
+public interface TeamDAO extends CRUDRepository {
+
+}
